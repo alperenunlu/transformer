@@ -1,0 +1,8 @@
+datasets
+tokenizers
+accelerate
+transformer
+torchmetrics
+tqdm
+wandb
+torch

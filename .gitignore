@@ -1,0 +1,6 @@
+# pixi environments
+.pixi
+*.egg-info
+
+.mypy_cache
+wandb

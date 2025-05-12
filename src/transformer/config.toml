@@ -1,0 +1,25 @@
+[model]
+vocab_size = 37000
+hidden_size = 512
+dropout = 0.0
+num_hidden_layers = 6
+filter_size = 2048
+num_heads = 8
+attention_key_channels = 0
+attention_value_channels = 0
+attention_dropout = 0.0
+relu_dropout = 0.0
+residual_dropout = 0.1
+
+[training]
+batch_size = 4096
+max_length = 256
+clip_grad_norm = 0.0
+optimizer_adam_epsilon = 1e-8
+learning_rate = 0.1
+learning_rate_warmup_steps = 4000
+weight_decay = 0.0
+optimizer_adam_beta1 = 0.9
+optimizer_adam_beta2 = 0.98
+label_smoothing = 0.1
+max_steps = 100_000
