@@ -172,6 +172,9 @@ if __name__ == "__main__":
     parser.add_argument(
         "--output_dir", type=str, default="checkpoints", help="Checkpoint directory."
     )
+    parser.add_argument(
+        "--mixed_precision", type=str, default="bf16", help="Mixed precision mode."
+    )
 
     args = parser.parse_args()
     config = get_hparams(args.config)
@@ -180,6 +183,7 @@ if __name__ == "__main__":
         project_dir=args.project_dir,
         log_with="wandb",
         dynamo_backend="inductor" if torch.cuda.is_available() else None,
+        mixed_precision=args.mixed_precision,
     )
     accelerator.init_trackers(project_name="Transformer", config=config.asdict())
 
